@@ -21,7 +21,7 @@ function generatePassword() {
 	var OptionLowerCase = false, OptionUpperCase = false, OptionNumeric = false, OptionSpecialCharacters = false;
 	passwordLength = prompt("Please enter the length you would like your password, must be between 8 and 128");
   
-    if (passwordLength <= 8 && passwordLength <= 128){
+    if (passwordLength >= 8 && passwordLength <= 128){
 		OptionLowerCase = confirm("Do you want lowercase letters?");
 		OptionUpperCase = confirm("Do you want uppercase letters?");
 		OptionNumeric = confirm("Do you want numbers?");
