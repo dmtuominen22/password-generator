@@ -11,6 +11,7 @@ A website that will create a random password that can have  lowercase, upercase,
 
 ## Website
 need to add this 
+https://dmtuominen22.github.io/password-generator/
 
 ![screenshopt of project](https://user-images.githubusercontent.com/84994258/124325939-d0108480-db42-11eb-8c8a-c7be0a2fbd02.PNG)
 
