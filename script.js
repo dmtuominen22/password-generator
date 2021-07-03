@@ -15,23 +15,34 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-function generatePassword() {
+function generatePassword(){
 	var passwordChars = "";
 	var passwordLength = 0;
 	var OptionLowerCase = false, OptionUpperCase = false, OptionNumeric = false, OptionSpecialCharacters = false;
 	passwordLength = prompt("Please enter the length you would like your password, must be between 8 and 128");
-  
-    if (passwordLength >= 8 && passwordLength <= 128){
+    
+  if (passwordLength >= 8 && passwordLength <= 128){
 		OptionLowerCase = confirm("Do you want lowercase letters?");
 		OptionUpperCase = confirm("Do you want uppercase letters?");
 		OptionNumeric = confirm("Do you want numbers?");
 		OptionSpecialCharacters = confirm("Do you want special characters?");
+
+    //option/confirm 
+  if(OptionLowerCase || OptionUpperCase || OptionNumeric || OptionSpecialCharacters) {
+      
     return passwordChars = createPassword(passwordLength, [OptionLowerCase, OptionUpperCase, OptionNumeric, OptionSpecialCharacters]);
-	}
-	else {
-		alert("Invalid password length.");
+    }
+    else {
+      alert("You need to pick at least one character type.");
+    }
+
+    return passwordChars = createPassword(passwordLength, [OptionLowerCase, OptionUpperCase, OptionNumeric, OptionSpecialCharacters]);
+  	}
+  	else {
+	  	alert("Invalid password length.");
 	}
 }
+
 
 function createPassword(pLength, pOptions){
   var generatedPassword = "";
@@ -67,4 +78,5 @@ function createPassword(pLength, pOptions){
   }
   return generatedPassword;
   }
+  
   
